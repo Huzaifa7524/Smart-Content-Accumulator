@@ -1,0 +1,158 @@
+{% extends "sma/base.html" %} 
+
+{% load static%}
+
+{% block title %}About us {% endblock %}
+
+{% block contant %}
+
+<!-- Banner Here -->
+<section class="banner__section breadcumnd__banner bannerbg">
+   <!--Mask-->
+   <div class="banner__bgmask">
+      <img src="{% static 'img/elements/box-element.png' %}" alt="mask">
+   </div>
+   <!--Mask-->
+   <!--Container-->
+   <div class="container">
+      <div class="breadcumnd__wrapper">
+         <div class="row g-4  justify-content-between align-items-end">
+            <!--col-->
+            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-8">
+               <div class="breadcumnd__content">
+                  <h1 class="title"> 
+                     About Us
+                  </h1>
+                  <ul class="breadcumnd__list">
+                     <li>
+                        <a href="{% url 'index'  %}">
+                           Home
+                        </a>
+                     </li>
+                     <li>
+                        <span class="icon">
+                           <i class="material-symbols-outlined">
+                              chevron_right
+                           </i>
+                        </span>
+                     </li>
+                     <li class="sucess">
+                        About Us
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!--col-->
+            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-8">
+               <div class="breadcumnd__thumb">
+                  <img src="{% static 'img/banner/breadcumnd.png' %}" alt="bread">
+               </div>
+            </div>
+            <!--col-->
+         </div>
+         <!--ai text-->
+         <div class="bread__ai">
+            <img src="{% static  'img/elements/t-element.png' %}" alt="img">
+         </div>
+         <!--ai text-->
+      </div>
+   </div>
+   <!--Container-->
+</section>
+<!-- Banner End -->
+
+<section class="include__benefits bgsection pt-120 pb-120">
+    <div class="container">
+       <div class="section__header section__center pb__60">
+          <h2>
+             Our Team
+          </h2>
+       </div>
+       <div class="include__benefits__wrap owl-theme owl-carousel">
+          <div class="inclue__benefits__box" height='400px' >
+             <img src="{% static 'img/image.jpeg' %}" style='height:500px;!important' class="img-thumbnail">
+                <div class="content mt-2">
+                    <h2>
+                      Huzaifa Tahir
+                    </h2>
+                    <p>
+                      Python Django Dev
+                    </p>
+                    <div class="mb-4 pb-2">
+                      <button type="button" class="btn btn-outline-primary btn-floating">
+                        <a href="https://web.facebook.com/HuzaifaTahir178"><i class="fa fa-facebook-f fa-lg text-dark"></i></a>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary btn-floating">
+                      <a href="https://twitter.com/huzaifatahir751"> <i class="fa fa-twitter fa-lg text-dark"></i></a>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary btn-floating">
+                      <a href="https://www.linkedin.com/in/huzaifatahir7524/"> <i class="fa fa-linkedin fa-lg text-dark"></i></a>
+                      </button>
+                   </div> 
+                </div>
+          </div>
+          <div class="inclue__benefits__box benefits__box2" height='400px'>
+             <img src="{% static 'img/shuja.jpg' %}" style='height:500px;!important' class="img-thumbnail">
+                <div class="content mt-2">
+                    <h2>
+                      Huzaifa Tahir
+                    </h2>
+                    <p>
+                      Python Django Dev
+                    </p>
+                    <div class="mb-4 pb-2">
+                      <button type="button" class="btn btn-outline-primary btn-floating">
+                        <a href="https://web.facebook.com/HuzaifaTahir178"><i class="fa fa-facebook-f fa-lg text-dark"></i></a>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary btn-floating">
+                      <a href="https://twitter.com/huzaifatahir751"> <i class="fa fa-twitter fa-lg text-dark"></i></a>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary btn-floating">
+                      <a href="https://www.linkedin.com/in/huzaifatahir7524/"> <i class="fa fa-linkedin fa-lg text-dark"></i></a>
+                      </button>
+                   </div> 
+                </div>
+          </div>
+          <div class="inclue__benefits__box benefits__box3" >
+             <img src="{% static 'img/Umair.jpeg' %}" width="200px" style='height:500px;!important' class="img-thumbnail">
+                <div class="content mt-2">
+                    <h2>
+                      Huzaifa Tahir
+                    </h2>
+                    <p>
+                      Python Django Dev
+                    </p>
+                    <div class="mb-4 pb-2">
+                      <button type="button" class="btn btn-outline-primary btn-floating">
+                        <a href="https://web.facebook.com/HuzaifaTahir178"><i class="fa fa-facebook-f fa-lg text-dark"></i></a>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary btn-floating">
+                      <a href="https://twitter.com/huzaifatahir751"> <i class="fa fa-twitter fa-lg text-dark"></i></a>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary btn-floating">
+                      <a href="https://www.linkedin.com/in/huzaifatahir7524/"> <i class="fa fa-linkedin fa-lg text-dark"></i></a>
+                      </button>
+                   </div> 
+                </div>
+          </div>
+          
+       </div>
+    </div>
+
+    <div class="bene__element1">
+       <img src="{% static 'img/banner/devided-element2.png' %}" alt="img">
+    </div>
+    <div class="bene__lockyello">
+       <img src="{% static 'img/banner/devided-lockyello.png' %}" alt="img">
+    </div>
+    <div class="bene__blump">
+       <img src="{% static 'img/banner/round-devided.png' %}" alt="img">
+    </div>
+    <div class="bene__blump2">
+       <img src="{% static 'img/banner/round-devided.png' %}" alt="img">
+    </div>
+ </section>
+
+
+
+{% endblock contant %}

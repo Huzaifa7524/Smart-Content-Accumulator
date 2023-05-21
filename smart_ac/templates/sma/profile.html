@@ -1,0 +1,102 @@
+
+{% extends "sma/base.html" %} 
+{% load static %} 
+{% block title %} Profile {% endblock title %} 
+
+
+{% block contant %}
+
+<!-- Banner Here -->
+<section class="banner__section breadcumnd__banner bannerbg">
+   <!--Mask-->
+   <div class="banner__bgmask">
+      <img src="{% static 'img/elements/box-element.png' %}" alt="mask">
+   </div>
+   <!--Mask-->
+   <!--Container-->
+   <div class="container">
+      <div class="breadcumnd__wrapper">
+         <div class="row g-4  justify-content-between align-items-end">
+            <!--col-->
+            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-8">
+               <div class="breadcumnd__content">
+                  <h1 class="title"> 
+                     Welcome {{request.user}} !
+                  </h1>
+                  <ul class="breadcumnd__list">
+                     <li>
+                        <a href="{% url 'index'  %}">
+                           Home
+                        </a>
+                     </li>
+                     <li>
+                        <span class="icon">
+                           <i class="material-symbols-outlined">
+                              chevron_right
+                           </i>
+                        </span>
+                     </li>
+                     <li class="sucess">
+                         Profile
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!--col-->
+            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-8">
+               <div class="breadcumnd__thumb">
+                  <img src="{% static 'img/banner/breadcumnd.png' %}" alt="bread">
+               </div>
+            </div>
+            <!--col-->
+         </div>
+         <!--ai text-->
+         <div class="bread__ai">
+            <img src="{% static  'img/elements/t-element.png' %}" alt="img">
+         </div>
+         <!--ai text-->
+      </div>
+   </div>
+   <!--Container-->
+</section>
+<!-- Banner End -->
+
+<section class="feature__section bgsection pt-120 pb-120">
+       <div class="container">
+          <div class="section__header section__center pb__60 wow fadeInUp" data-wow-duration="2s">
+             <h2>
+                {{request.user}}
+             </h2>
+             <p class="pb__32">
+               Email : {{request.user.email}} <br>
+             </p>
+             <a href="{% url 'password-change' %}" class="cmn--btn border__btn">
+                <span>
+                   Change Password
+                </span>
+             </a>
+          </div>
+
+       </div>
+       <div class="feature__rocket">
+          <img src="{% static 'img/elements/feature-rocket.png' %}" alt="rocket">
+       </div>
+       <div class="feature__ai">
+          <img src="{% static 'img/elements/feature-ali.png' %}" alt="rocket">
+       </div>
+       <div class="light__element1">
+          <img src="{% static 'img/elements/light-elements.png' %}" alt="light">
+       </div>
+       <div class="light__element2">
+          <img src="{% static 'img/elements/light-elements.png' %}" alt="light">
+       </div>
+       <div class="light__element3">
+          <img src="{% static 'img/elements/light-elements.png' %}" alt="light">
+       </div>
+       <div class="light__element4">
+          <img src="{% static 'img/elements/light-elements.png' %}" alt="light">
+       </div>
+    </section>
+
+
+    {% endblock contant %}

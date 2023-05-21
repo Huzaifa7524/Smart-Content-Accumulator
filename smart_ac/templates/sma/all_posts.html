@@ -1,0 +1,106 @@
+{% extends "sma/base.html" %}
+{% load static %}
+
+{% block title %}
+   All Posts
+{% endblock title %}
+
+
+{% block contant %}
+<!-- Banner Here -->
+<section class="banner__section breadcumnd__banner bannerbg">
+   <!--Mask-->
+   <div class="banner__bgmask">
+      <img src="{% static 'img/elements/box-element.png' %}" alt="mask">
+   </div>
+   <!--Mask-->
+   <!--Container-->
+   <div class="container">
+      <div class="breadcumnd__wrapper">
+         <div class="row g-4  justify-content-between align-items-end">
+            <!--col-->
+            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-8">
+               <div class="breadcumnd__content">
+                  <h1 class="title"> 
+                     All Posts
+                  </h1>
+                  <ul class="breadcumnd__list">
+                     <li>
+                        <a href="{% url 'index'  %}">
+                           Home
+                        </a>
+                     </li>
+                     <li>
+                        <span class="icon">
+                           <i class="material-symbols-outlined">
+                              chevron_right
+                           </i>
+                        </span>
+                     </li>
+                     <li class="sucess">
+                         Posts
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!--col-->
+            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-8">
+               <div class="breadcumnd__thumb">
+                  <img src="{% static 'img/banner/breadcumnd.png' %}" alt="bread">
+               </div>
+            </div>
+            <!--col-->
+         </div>
+         <!--ai text-->
+         <div class="bread__ai">
+            <img src="{% static  'img/elements/t-element.png' %}" alt="img">
+         </div>
+         <!--ai text-->
+      </div>
+   </div>
+   <!--Container-->
+</section>
+<!-- Banner End -->
+
+<!--Blog Grid Section-->
+<section class="blog__grid__section bg__white pt-80 pb-80">
+      <!--container-->
+      <div class="container">
+         <!--row-->
+         <div class="row g-4">
+          {% for article in page_obj %}
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+               <div class="capabilities__items blog__grid__items">
+                   <a href="blog-details.html" class="thumb">
+                     <img src="{{ article.image }}" alt="capabi" height="300px">
+                     {% comment %} <img src="{% static 'img/bog-capabilities/bl1.jpg' %}" alt="capabi"> {% endcomment %}
+                  </a>
+                   <div class="content">
+                     <h4>
+                        <a href="{% url 'post_detail' pk=article.pk %}">
+                           {{ article.title }}
+                        </a>
+                     </h4>
+                     <a href="{% url 'post_detail' pk=article.pk %}" class="capa__more">
+                        <span>
+                           Read More
+                        </span>
+                        <i class="material-symbols-outlined">
+                        east
+                        </i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+          {% endfor %}
+         </div>
+         <!--row-->
+      </div>
+      <!--container-->
+</section>
+<!--Blog Grid Section-->
+
+{% endblock contant %}
+
+
+

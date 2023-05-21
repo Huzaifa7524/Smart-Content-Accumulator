@@ -1,0 +1,97 @@
+{% extends "sma/base.html" %}
+{% load static %}
+{% block title %}Sign Up {% endblock %}
+{% block contant %}
+
+<!-- Banner Here -->
+<section class="banner__section breadcumnd__banner bannerbg">
+   <!--Mask-->
+   <div class="banner__bgmask">
+      <img src="{% static 'img/elements/box-element.png' %}" alt="mask">
+   </div>
+   <!--Mask-->
+   <!--Container-->
+   <div class="container">
+      <div class="breadcumnd__wrapper">
+         <div class="row g-4  justify-content-between align-items-end">
+            <!--col-->
+            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-8">
+               <div class="breadcumnd__content">
+                  <h1 class="title"> 
+                      Welcome Back!
+                  </h1>
+                  <ul class="breadcumnd__list">
+                     <li class="sucess">
+                         Sign Up to your account 
+                     </li>
+               </div>
+            </div>
+            <!--col-->
+            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-8">
+               <div class="breadcumnd__thumb">
+                  <img src="{% static 'img/banner/breadcumnd.png' %}" alt="bread">
+               </div>
+            </div>
+            <!--col-->
+         </div>
+         <!--ai text-->
+         <div class="bread__ai">
+            <img src="{% static  'img/elements/t-element.png' %}" alt="img">
+         </div>
+         <!--ai text-->
+      </div>
+   </div>
+   <!--Container-->
+</section>
+<!-- Banner End -->
+<!-- sign in Here -->
+<section class="sigin__page bg__white">
+   <div class="container">
+     {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <div class="alert alert-danger" role="alert">
+          {{ error }}
+        </div>
+         {% endfor %}
+     {% endif %}
+      <div class="signin__wrapper">
+         <div class="row justify-content-between align-items-center">
+            <div class="col-lg-6">
+               <div class="signin__content__left">  
+                  <form method="post" novalidate>
+                     <div class="row g-4">
+                        <div class="col-lg-12">
+                           {% csrf_token %} 
+                          {% for fm in form %}
+                          <div class="form__grp">
+                            {{ fm.label_tag }}
+                            {{ fm }}
+                            <small class='text-danger'>{{ fm.errors|striptags }}</small> <br>
+                          </div>
+                          {% endfor %}
+                        </div>
+                     </div>
+                     <p class="accout">
+                        Do you have an account? <a href="{% url 'login' %}">Signin</a>
+                     </p>
+                     <button type="submit" class="cmn--btn">
+                        <span>
+                           Signup
+                        </span>
+                     </button>
+                  </form>
+               </div>
+            </div>
+            <div class="col-lg-5">
+               <div class="signin__thumb">
+                  <img src="{% static 'img/signin/signin.png' %}" alt="signup">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- sign in End -->
+{% endblock contant %}
+
+

@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>{% block title %}Contact us {% endblock %}</title>
+   <!--Favicon img-->
+   <link rel="shortcut icon" href='{% static "/img/logo/favicon.png" %}'>
+   <!--main css-->
+   <link rel="stylesheet" href='{% static "css/main.css" %}'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+     {% include "sma/navbar.html" %}
+
+    {% block contant %}
+    
+    {% endblock contant %}
+
+   {% include "sma/footer.html" %}
+
+
+   <!--Jquery 3 6 0 Min Js-->
+   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+   <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+   <!--Bootstrap bundle Js-->
+   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+   <!--Viewport Jquery Js-->
+   <script src="{% static 'js/viewport.jquery.js' %}"></script>
+   <!--Odometer min Js-->
+   <script src="{% static 'js/odometer.min.js' %}"></script>
+   <!--Magnifiw Popup Js-->
+   <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+   <!--Wow min Js-->
+   <script src="{% static 'js/wow.min.js' %}"></script>
+   <!--Owl carousel min Js-->
+   <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+   <!--Prijm Js-->
+   <script src="{% static 'js/prism.js' %}"></script>
+   <!--main Js-->
+   <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

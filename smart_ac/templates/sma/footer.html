@@ -1,0 +1,129 @@
+{% load static %}
+
+<!-- Footer Here -->
+<footer class="footer__section footer__section__four">
+   <!--container-->
+   <div class="container">
+      <div class="footer__wrapper">
+         <div class="footer__top">
+            <div class="row g-5">
+               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                  <div class="footer__widget">
+                     <div class="widget__head">
+                        <a href="index.html" class="footer__logo">
+                           <img src="{% static '/img/logo/logo.png' %}" alt="logo">
+                        </a>
+                     </div>
+                     <p class="pb__20">
+                        Welcome to Smart Content Accumulator, your ultimate source for concise and curated news summaries. Stay informed with just two lines of the most important news stories from around the world
+                     </p>
+                     <ul class="social">
+                        <li>
+                           <a href="javascript:void(0)" class="social__item">
+                              <span class="icon">
+                                 <img src="{% static 'img/svg-icon/facebook.svg' %}" alt="svg">
+                              </span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)" class="social__item social__itemtwo">
+                              <span class="icon">
+                                 <img src="{% static 'img/svg-icon/instagram.svg' %}" alt="svg">
+                              </span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)" class="social__item social__itemthree">
+                              <span class="icon">
+                                 <img src="{% static 'img/svg-icon/twitter.svg' %}" alt="svg">
+                              </span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)" class="social__item social__itemfour">
+                              <span class="icon">
+                                 <img src="{% static 'img/svg-icon/linkedin.svg' %}" alt="svg">
+                              </span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                  <div class="footer__widget">
+                     <div class="widget__head">
+                        <h4>
+                           Contact
+                        </h4>
+                     </div>
+                      <div class="widget__link">
+                        <a href="tel:03218504372" class="footer__contact__items">
+                           <span class="icon">
+                              <i class="material-symbols-outlined">
+                                 add_call
+                              </i>
+                           </span>
+                          <span class="fcontact__content">
+                              0321 8504372
+                          </span>
+                        </a>
+                        <a href="mailto:huzaifatahir7524@gmail.com" class="footer__contact__items">
+                           <span class="icon icontwo">
+                              <i class="material-symbols-outlined">
+                                 mark_as_unread
+                              </i>
+                           </span>
+                           <span class="fcontact__content">
+                             <span class="__cf_email__" data-cfemail="25405d444855494065405d44485549400b464a48">huzaifatahir7524@gmail.com</span>
+                           </span>
+                        </a>
+                        <a href="https://goo.gl/maps/38Fywqwa2raXgPiQ8" class="footer__contact__items">
+                           <span class="icon iconthree">
+                              <span class="material-symbols-outlined">
+                                 pin_drop
+                              </span>
+                           </span>
+                           <span class="fcontact__content">
+                              Chung streat no 1, Lahore, Pakistan
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                  <div class="footer__widget">
+                     <div class="widget__head">
+                        <h4>
+                           Quick Links
+                        </h4>
+                     </div>
+                     <div class="widget__link">
+                        <a href="{% url 'about' %}" class="link">
+                           About us
+                        </a>
+                        <a href="{% url 'contact' %}" class="link">
+                           Contact us
+                        </a>
+                        <a href="{% url 'posts'  %}" class="link">
+                           Posts
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer__bottom footer__bottom__two">
+            <p>
+               Copyright &copy;2023 <a href="{% url 'index'  %}" class="smart">Smart Content Accumulator</a>.
+            </p>
+         </div>
+      </div>
+   </div>
+   <!--container-->
+   <!--footer mask-->
+   <div class="footer__mask">
+      <img src="{% static 'img/elements/box-element.png' %}" alt="mask">
+   </div>
+   <!--footer mask-->
+</footer>
+<!-- Footer End -->

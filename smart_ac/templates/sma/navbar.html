@@ -1,0 +1,127 @@
+
+
+
+{% load static %}
+
+<!-- Header top Here -->
+<header class="header-section">
+   <div class="container">
+      <div class="header-wrapper">
+         <div class="logo-menu">
+            <a href="{% url 'index'  %}" class="logo">
+               <img src="{% static 'img/logo/logo.png' %}" alt="logo">
+            </a>
+            <a href="{% url 'index'  %}" class="small__logo d-xl-none">
+               <img src="{% static 'img/logo/favicon.png' %}" alt="logo">
+            </a>
+         </div>
+         <div class="menu__right__components compoent__middle d-flex align-items-center">
+            <div class="menu__components grid__style">
+            {% if request.user.is_authenticated %}
+               <ul class="main-menu ">
+                  <li class="grid__style">
+                     <a href="javascript:void(0)" class="d-flex">
+                        <span>
+                        {{request.user}} 
+                        </span>
+                        <span class="icons">
+                           <i class="material-symbols-outlined">
+                              expand_more
+                           </i>
+                        </span>
+                     </a>
+                     <ul class="sub-menu">
+                        <li class="subtwohober">
+                           <a href="{% url 'profile'  %}">Profile</a>
+                        </li>
+                        <li><a href="{% url 'password-change' %}">Change Password</a></li>
+                        <li><a href="{% url 'logout'  %}" class="text-danger">Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               {% else %}
+               <a href="{% url 'register'  %}" class="cmn--btn">
+                  <span>
+                     Sign in
+                  </span>
+               </a>
+            {% endif %}
+            </div>
+            <div class="header-bar d-lg-none">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <ul class="main-menu">
+            <li>
+               <a href="{% url 'index'  %}" class="d-flex">
+                 <span>
+                     Home 
+                 </span>
+               </a>
+            </li>
+              <li>
+               <a href="{% url 'about' %}" class="d-flex">
+                  <span>
+                     About Us
+                  </span>
+                </a>
+            </li>
+            <li class="grid__style">
+               <a href="{% url 'posts'  %}" class="d-flex">
+                  <span>
+                     Posts
+                  </span>
+                </a>
+            </li>
+            <li class="grid__style">
+               <a href="{% url 'contact' %}" class="d-flex">
+                  <span>
+                     Contact Us
+                  </span>
+                </a>
+            </li>
+         </ul>
+         <div class="menu__right__components right__com d-flex align-items-center">
+            <div class="menu__components grid__style">
+            {% if request.user.is_authenticated %}
+            <ul class="main-menu ">
+               <li class="grid__style">
+                  <a href="javascript:void(0)" class="d-flex">
+                     <span>
+                     {{request.user}} 
+                     </span>
+                     <span class="icons">
+                        <i class="material-symbols-outlined">
+                           expand_more
+                        </i>
+                     </span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="subtwohober">
+                        <a href="{% url 'profile'  %}">Profile</a>
+                     </li>
+                     <li><a href="{% url 'password-change' %}">Change Password</a></li>
+                     <li><a href="{% url 'logout'  %}" class="text-danger">Logout</a></li>
+                  </ul>
+               </li>
+            </ul>
+            {% else %}
+            <a href="{% url 'login' %}" class="cmn--btn">
+               <span>
+                  Sign in
+               </span>
+            </a>
+               {% endif %}
+            </div>
+            <div class="header-bar d-lg-none">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+<!-- Header top End -->
