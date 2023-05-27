@@ -1,0 +1,1 @@
+web gunicorn smart_accumolator.wsgi:application --log-file - 
