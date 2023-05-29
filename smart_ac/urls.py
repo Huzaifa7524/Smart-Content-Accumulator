@@ -2,6 +2,8 @@ from django.urls import path
 from smart_ac import views
 from django.contrib.auth import views as auth_view
 from .forms import UserLoginForm,UserPasswordChangeForm,UserPasswordResetForm,UserSetPasswordForm
+from django.conf import settings # new
+from  django.conf.urls.static import static #new
 
 urlpatterns = [
     ############################# home page #####################################
@@ -33,3 +35,6 @@ urlpatterns = [
     ############################# End Reset Password ##################################
      
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_URL)
