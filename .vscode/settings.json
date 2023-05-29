@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/fc6cdb86-f281-4f3a-a0c9-b4db76e79494/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/alhaq",
+    "appService.deploySubpath": "."
+}

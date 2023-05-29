@@ -38,7 +38,12 @@ def show_post(request):
     all_posts = Article.objects.all()
     return render(request, 'sma/all_posts.html', {'page_obj': all_posts})
 
-def data_show(request,pk):
+def data_show(request,data,title):
+    # get article instance from database
+    post = Article.objects.get(title=title, summary=data)
+    return render(request, 'sma/data.html', {'article': post})
+
+def data_show_detail(request,pk):
     # get article instance from database
     post = Article.objects.get(pk=pk)
     return render(request, 'sma/data.html', {'article': post})

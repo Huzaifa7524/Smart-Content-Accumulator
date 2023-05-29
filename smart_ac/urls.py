@@ -12,7 +12,7 @@ urlpatterns = [
     path('data/<str:data>/<str:title>/', views.data_show, name='data'),
     # path('all_articles/', views.data_list, name='all_articles'),
     path('all_posts/', views.show_post, name='posts'),
-    path('post_detail/<int:pk>/', views.data_show, name='post_detail'),
+    path('post_detail/<int:pk>/', views.data_show_detail, name='post_detail'),
     ############################# home page End #####################################
     ############################# Account Login #####################################
     path('profile/', views.Profile, name='profile'),
