@@ -112,14 +112,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 
+# STATIC_URL = '/static/'
+
+# # Add these new lines
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'smart_ac/static'),
+# )
+
 STATIC_URL = '/static/'
 
 # Add these new lines
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'smart_ac/static'),
+        'smart_ac/static',
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = '/root/project/static/'
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 LOGIN_REDIRECT_URL = '/profile/'
