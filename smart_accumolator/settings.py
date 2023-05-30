@@ -14,9 +14,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-bqk@-!118or!q3gyprb)%#!08z%cp3y!aew(p8u@$v1^m=aihx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['165.227.224.65','http://smartcontentaccumulator.tech/']
 
 
 # Application definition
