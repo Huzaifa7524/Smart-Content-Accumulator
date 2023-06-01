@@ -4,7 +4,7 @@ from django.views import View
 from django.contrib import messages
 from .forms import UserRegisterForm,Contact_Us
 from django.contrib.auth import authenticate, login
-from .models import Article
+from .models import Article,Contact_us
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 
@@ -90,15 +90,15 @@ def ContactUS(request):
             email = form.cleaned_data['email']
             phone = form.cleaned_data['phone']
             message = form.cleaned_data['message']
+            
+            contact_us = Contact_us(name=name, email=email, phone=phone, message=message)
+            contact_us.save()
+            sender_email = 'huzaifatahir7524@gmail.com'
+            recipient_email = email
+            message = 'Thank you for contacting us. We will get back to you soon. Smart Content Accumulator Team'
 
             # Send email
-            send_mail(
-                'Contact Form Submission',
-                f'Name: {name}\nEmail: {email}\n Phone: {phone} \n\nMessage:\n{message}',
-                'huzaifatahir7524@gmail.com',  # Replace with your email address
-                [f'{email}'],  # Replace with the recipient's email address
-                fail_silently=False,
-            )
+            send_mail('Smart Content Accumulator', message, sender_email, [recipient_email], fail_silently=False)
             return render(request, 'sma/success.html')
     else:
         form = Contact_Us()

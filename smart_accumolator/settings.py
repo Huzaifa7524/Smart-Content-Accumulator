@@ -123,7 +123,7 @@ STATIC_URL = '/static/'
 
 # Add these new lines
 STATICFILES_DIRS = (
-        'smart_ac/static',
+        'project/static',
 )
 
 STATIC_ROOT = '/root/project/static/'
